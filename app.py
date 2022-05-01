@@ -11,6 +11,8 @@ import fire
 import questionary
 from pathlib import Path
 
+import csv
+
 from qualifier.utils.fileio import load_csv
 
 from qualifier.utils.calculators import (
@@ -102,15 +104,18 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     return bank_data_filtered
 
 
-def save_qualifying_loans(qualifying_loans):
+#def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
-
+# Function used to save qualifying loan data to a csv file    
+def save_csv(qualifying_loans):
+    csvpath = Path('qualifying_loans.csv')
+    with open(csvpath,'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        csvwriter.writerows(qualifying_loans)
 
 def run():
     """The main function for running the script."""
@@ -127,7 +132,7 @@ def run():
     )
 
     # Save qualifying loans
-    save_qualifying_loans(qualifying_loans)
+    save_csv(qualifying_loans)
 
 
 if __name__ == "__main__":
