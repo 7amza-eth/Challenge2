@@ -1,0 +1,48 @@
+    1  python app.py 
+    2  conda activate dev
+    3  python app.py 
+    4  intall pythonfire
+    5  pip install fire
+    6  python app.py 
+    7  python app.py 
+    8  git stauts
+    9  git status
+   10  git add -A
+   11  git commit -m 'Created temporary save_csv function and integrated the function into existing app.py'
+   12  git push
+   13  git status
+   14  python app.py 
+   15  python app.py 
+   16  python app.py 
+   17  python app.py 
+   18  git add -A
+   19  git commit -m 'moved function save_csv to fileio module'
+   20  git push
+   21  python app.py 
+   22  python app.py 
+   23  python app.py 
+   24  python app.py 
+   25  python app.py 
+   26  python app.py 
+   27  python app.py 
+   28  git status
+   29  git add -A
+   30  git commit -m 'Added save_qualifying_loans function to improve usability of app'
+   31  git push
+   32  python app.py 
+   33  python app.py 
+   34  python app.py 
+   35  python app.py 
+   36  python app.py 
+   37  python app.py 
+   38  git status
+   39  python app.py 
+   40  python app.py 
+   41  python app.py 
+   42  python app.py 
+   43  python app.py 
+   44  git status
+   45  git add -A
+   46  git commit -m 'fixed save_qualifying_loans function due to incorrect csvpath error, added a confirmation once file is saved, and updated README'
+   47  git push
+   48  history 50 > terminal_history.txt
