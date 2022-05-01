@@ -102,7 +102,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
-# Function used to save qualifying loans to csv depending on arguments
+# Function used to save qualifying loans to csv depending on arguments met
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
@@ -117,13 +117,14 @@ def save_qualifying_loans(qualifying_loans):
         want_to_save = questionary.confirm('Would you like to save the loans you qualify for?').ask()
         if want_to_save == True:
             # Assigns save path to variable
-            save_location = questionary.path('Where you like to save your qualifying loans?').ask()
+            save_location = questionary.path('Where you like to save your qualifying loans? (use ".." if you would like to go up a directory)').ask()
+            print(f'The loans you have qualified for are saved in a file called qualifying_loans.csv within the {save_location} path that you selected')
         else:
             sys.exit('You have opted not to save the loans you qualified for.')
     #Creates csvpath and runs save_csv mododule
-    csvpath = Path(save_location)
+    csvpath = Path(save_location + '/qualifying_loans.csv')
     save_csv(csvpath, qualifying_loans)
-
+    
 
 def run():
     """The main function for running the script."""

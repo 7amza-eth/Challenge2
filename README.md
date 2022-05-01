@@ -1,33 +1,44 @@
-# Project Title
+# Challenge 2 Loan Qualifier
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This app can be used to determine whether you qualify for the list of loans provided based on personal info that you enter. It will then prompt whether or not you would like to save the list of loans you qualify for.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+Python
+
+[Fire](https://github.com/google/python-fire)
+Used for CLI
+
+[Questionary](https://questionary.readthedocs.io/en/stable/)
+Used for user input
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
-
+Please run the following commands within terminal before runnng the app.
+```
+pip install fire
+pip install questionary
+```
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
-
+Save folder to a directory of your choosing, then open a terminal window within said directory and run the below code
+```
+python app.py
+```
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Hamza Hegab - 7amza.eth
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT
