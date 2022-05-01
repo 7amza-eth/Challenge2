@@ -13,7 +13,7 @@ from pathlib import Path
 
 import csv
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -110,12 +110,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-# Function used to save qualifying loan data to a csv file    
-def save_csv(qualifying_loans):
-    csvpath = Path('qualifying_loans.csv')
-    with open(csvpath,'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
-        csvwriter.writerows(qualifying_loans)
+
 
 def run():
     """The main function for running the script."""
